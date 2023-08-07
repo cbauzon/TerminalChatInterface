@@ -1,7 +1,7 @@
 import socket
 import threading
 
-HOST = input("What is the IP address that you want to connect to? ")
+HOST = input("What is the IP address that you want to connect to?: ")
 PORT = int(input("What is the port #: "))
 
 
