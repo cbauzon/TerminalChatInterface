@@ -1,8 +1,8 @@
 import socket
 
 # Gets host and port name of the computer running the server
-HOST = socket.gethostname()
-PORT = 12345
+HOST = input("What is the IP address you want to host the server on?: ")
+PORT = int(input("What port # will the server be hosted on: "))
 
 # Creates socket object, binds socket to addr, and opens socket for connections
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

@@ -1,8 +1,9 @@
 import socket
 import threading
 
-HOST = ""
-PORT = 12345
+HOST = input("What is the IP address that you want to connect to? ")
+PORT = int(input("What is the port #: "))
+
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((HOST, PORT))
@@ -19,7 +20,7 @@ def receive():
             break
 
 def send():
-    while true:
+    while True:
         message = input()
         client.send(message.encode())
 
