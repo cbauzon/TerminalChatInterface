@@ -7,7 +7,7 @@ PORT = int(input("What port # will the server be hosted on: "))
 # Creates socket object, binds socket to addr, and opens socket for connections
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((HOST, PORT))
-s.listen()
+s.listen(5)
 
 # Initializes client list
 clients = []
