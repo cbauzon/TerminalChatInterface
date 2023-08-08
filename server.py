@@ -39,7 +39,7 @@ def handle_client(conn, addr):
             conn.close()
             break
 
-print(f"{color.fg.cyan}Server is listening...")
+print(f"{color.fg.cyan}Server is listening...{color.reset}")
 
 while True:
     conn, addr = server.accept()
