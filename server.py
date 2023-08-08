@@ -1,9 +1,16 @@
 import socket
 import threading
+import colors
+
+color = colors.colors()
+
+# For testing purposes
+HOST = "127.0.0.1"
+PORT = 12345
 
 # Gets host and port name of the computer running the server
-HOST = input("What is the IP address you want to host the server on?: ")
-PORT = int(input("What port # will the server be hosted on: "))
+# HOST = input("What is the IP address you want to host the server on?: ")
+# PORT = int(input("What port # will the server be hosted on: "))
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((HOST, PORT))
@@ -32,7 +39,7 @@ def handle_client(conn, addr):
             conn.close()
             break
 
-print("Server is listening...")
+print(f"{color.fg.cyan}Server is listening...")
 
 while True:
     conn, addr = server.accept()
